@@ -15,7 +15,6 @@
     
     <script type="text/javascript">
         function myFunction() {
-//            document.getElementById("mainButton").innerHTML = "YOU CLICKED ME!";
             console.log("button clicked")
             var randVillager = Math.floor(Math.random() * data.length) + 1;
                        villagerPrinter(data[randVillager])
@@ -26,7 +25,8 @@
             console.log(villager[1])
             console.log(villager[2])
             var villagerPrint = document.getElementById("villagerOutput");
-            villagerPrint.innerHTML = villager[3] + '<p> Your random villager is: \n ' + villager[0] + ', the ' + villager[1] + ' ' + villager[2] + '</p>'
+            
+            villagerPrint.innerHTML = villager[3] + '<p> Your random villager is: <br> ' + villager[0] + ', the ' + villager[1] + ' ' + villager[2] + '</p>'
             }
         
         
@@ -60,12 +60,18 @@
       </div>
     </nav>
     <div class="container">
-        <div class = "jumbotron">
-            <h1>Villager Randomiser</h1>
-            <p>Click the below button for a random villager<p>
-            <button id = "mainButton" onclick="myFunction()">Click me</button>
-            <div id="villagerOutput">
-                <img alt="NH-Admiral poster" class="" data-image-key="NH-Admiral_poster.png" data-image-name="NH-Admiral poster.png" height="100" src="https://vignette.wikia.nocookie.net/animalcrossing/images/5/52/NH-Admiral_poster.png/revision/latest/scale-to-width-down/100?cb=20200522013249" width="100"/>
+        <div class="row">
+            <div class = "jumbotron jumbotron-fluid">
+                <div class="col-md-8 mx-auto">
+                    <h1 class="display-4">Villager </h1>
+                    <h1 class="display-4">Randomiser</h1>
+                    <p>Click the below button for a random villager<p>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" id = "mainButton" onclick="myFunction()">Click me</button>
+                   
+                        <div class="lead text-center" id="villagerOutput">
+                        </div>
+                    
+                </div>
             </div>
         </div>
     </div>
